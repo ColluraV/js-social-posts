@@ -141,13 +141,14 @@ likeBtns.forEach ((singleButton, i) =>{
             //in caso di like già presente
         if (this.classList.contains("like-button--liked")){
             this.classList.remove("like-button--liked");
+            likeCounters[i].innerHTML = parseInt(likeCounters[i].innerHTML) - 1;
 
-            
             
 
             //in caso di like non presente
         } else {
             this.classList.add("like-button--liked");
+            likeCounters[i].innerHTML = parseInt(likeCounters[i].innerHTML) + 1;
 
         }
 
